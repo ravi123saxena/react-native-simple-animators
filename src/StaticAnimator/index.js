@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Animated, Easing } from 'react-native';
 
 import utils from '../utils';
@@ -14,34 +13,6 @@ export default class StaticAnimator extends React.Component {
 
     this.state = {
       animatedValue: new Animated.Value(0),
-    };
-  }
-
-  static get propTypes() {
-    return {
-      type: PropTypes.string.isRequired, // any react-native style prop
-      initialValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      finalValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      shouldAnimateIn: PropTypes.bool,
-      shouldAnimateOut: PropTypes.bool,
-      animateInCallBack: PropTypes.func,
-      animateInCallback: PropTypes.func,
-      animateOutCallBack: PropTypes.func,
-      animateOutCallback: PropTypes.func,
-      shouldRepeat: PropTypes.bool,
-      shouldLoop: PropTypes.bool, // used with repeat (cycles the animation instead of going back and forth)
-      style: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
-      duration: PropTypes.number,
-      easing: PropTypes.func,
-      delay: PropTypes.number,
-      children: PropTypes.node,
-    };
-  }
-
-  static get defaultProps() {
-    return {
-      duration: 250,
-      easing: Easing.gentle,
     };
   }
 
