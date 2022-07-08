@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity, Text, ViewPropTypes } from 'react-native';
+import { TouchableOpacity, Text } from 'react-native';
 
 import styles from './styles';
 
@@ -8,7 +8,6 @@ const propTypes = {
   handlePress: PropTypes.func,
   text: PropTypes.string,
   textStyle: Text.propTypes.style,
-  style: ViewPropTypes.style,
 };
 
 const defaultProps = {};
